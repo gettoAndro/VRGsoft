@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_emailed"
+        android:enabled="true"
+        android:icon="@drawable/nav_mail"
+        android:title="Most Emailed"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navigation_shared"
+        android:enabled="true"
+        android:icon="@drawable/nav_mail"
+        android:title="Most Shared"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navigation_viewed"
+        android:enabled="true"
+        android:icon="@drawable/nav_mail"
+        android:title="Most Viewed"
+        app:showAsAction="ifRoom" />
+
+
+</menu>
