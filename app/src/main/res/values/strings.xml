@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">VRG soft</string>
     <string name="api_key">lSkhKKoDYuumVqFDQUogvtyuhBVtDc28</string>
+    <string name="most_emailed">Most Emailed</string>
+    <string name="most_shared">Most Shared</string>
+    <string name="most_viewed">Most Viewed</string>
 </resources>

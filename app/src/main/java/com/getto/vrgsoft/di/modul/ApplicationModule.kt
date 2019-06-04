@@ -10,9 +10,9 @@ import com.catchman.data.DataLogger
 import com.getto.vrgsoft.domain.DomainLogger
 import com.getto.vrgsoft.domain.executor.PostExecutionThread
 import com.getto.vrgsoft.UiThread
-import com.example.data.ApiConst
+import com.getto.vrgsoft.data.ApiConst
 import com.getto.vrgsoft.data.AppDatabase
-import com.getto.vrgsoft.data.nyt.storage.CountryStorageImpl
+import com.getto.vrgsoft.data.nyt.storage.FavoriteStorageImpl
 import com.getto.vrgsoft.di.ApplicationContext
 import com.getto.vrgsoft.data.nyt.service.NytServiceImpl
 import com.getto.vrgsoft.data.nyt.service.NyTypesService
@@ -20,7 +20,7 @@ import com.getto.vrgsoft.data.JobExecutor
 import com.getto.vrgsoft.data.interceptor.LoggingInterceptor
 import com.getto.vrgsoft.data.nyt.NytGatewayImpl
 import com.getto.vrgsoft.data.nyt.service.MostPopularApi
-import com.getto.vrgsoft.data.nyt.storage.CountryStorage
+import com.getto.vrgsoft.data.nyt.storage.FavoriteStorage
 import com.getto.vrgsoft.domain.executor.ThreadExecutor
 import com.getto.vrgsoft.domain.gateway.NytGateway
 import dagger.Module
@@ -90,7 +90,7 @@ class ApplicationModule(private val app: Application) {
 
     @Provides
     @Singleton
-    fun provideSferaStorage(countryStorage: CountryStorageImpl): CountryStorage = countryStorage
+    fun provideSferaStorage(countryStorage: FavoriteStorageImpl): FavoriteStorage = countryStorage
 
     @Provides
     @Singleton

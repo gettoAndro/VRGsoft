@@ -1,6 +1,8 @@
 package com.getto.vrgsoft.data.nyt.service
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 data class CountryInfo(
         val id: Long,
@@ -15,16 +17,16 @@ data class Emailed(
    val num_results: Number?,
    val results: List<Results>?
 )
-
+@Parcelize
 data class Results(val url: String?,
                    val adx_keywords: String?,
                    val subsection: String?,
                    val email_count: Number?,
                    val count_type: String?,
-                   val column: Any?,
+                 //  val column: Any?,
                    val eta_id: Number?,
                    val section: String?,
-                   val id: Number?,
+                   val id: Long?,
                    val asset_id: Number?,
                    val nytdsection: String?,
                    val byline: String?,
@@ -40,7 +42,9 @@ data class Results(val url: String?,
                 //   val per_facet: List<String>?,
                 //   val geo_facet: List<String>?,
                    val uri: String?
-)
+) : Parcelable
+
+@Parcelize
 data class Media(
     val type: String?,
     val subtype: String?,
@@ -48,12 +52,13 @@ data class Media(
     val copyright: String?,
     val approved_for_syndication: Number?,
     @SerializedName("media-metadata") val metadata: List<MediaMetadata>?
-)
+) : Parcelable
 
+@Parcelize
 data class MediaMetadata
 (
     val url: String?,
     val format: String?,
     val height: Number?,
     val width: Number?
-)
+) : Parcelable

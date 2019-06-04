@@ -1,4 +1,4 @@
-package com.example.data
+package com.getto.vrgsoft.data
 
 class ApiConst private constructor() {
 

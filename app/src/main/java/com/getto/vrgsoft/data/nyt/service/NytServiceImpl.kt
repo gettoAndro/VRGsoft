@@ -6,5 +6,10 @@ import javax.inject.Inject
 
 class NytServiceImpl @Inject constructor(val mostPopularApi: MostPopularApi): NyTypesService {
 
-    override fun getEmailed(): Single<Emailed> = this.mostPopularApi.getEmailed()
+  override fun getShared(): Single<Emailed> = this.mostPopularApi.getShared()
+
+
+
+  override fun getEmailed(): Single<Emailed> = this.mostPopularApi.getEmailed()
+  override fun getViewed(): Single<Emailed> = this.mostPopularApi.getViewed()
 }

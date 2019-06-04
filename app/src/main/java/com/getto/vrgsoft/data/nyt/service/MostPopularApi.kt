@@ -9,4 +9,13 @@ interface MostPopularApi {
     @GET("emailed/30.json?api-key=lSkhKKoDYuumVqFDQUogvtyuhBVtDc28")
     fun getEmailed(): Single<Emailed>
 
+    @GET("shared/30.json?api-key=lSkhKKoDYuumVqFDQUogvtyuhBVtDc28")
+    fun getShared() : Single<Emailed>
+
+
+
+    @GET("viewed/30.json?api-key=lSkhKKoDYuumVqFDQUogvtyuhBVtDc28")
+    fun getViewed() : Single<Emailed>
+
+
 }

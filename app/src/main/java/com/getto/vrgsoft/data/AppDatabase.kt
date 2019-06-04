@@ -2,10 +2,10 @@ package com.getto.vrgsoft.data
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
-import com.getto.vrgsoft.data.nyt.storage.CountriesDao
-import com.getto.vrgsoft.data.nyt.storage.StorageCountries
+import com.getto.vrgsoft.data.nyt.storage.FavoriteDao
+import com.getto.vrgsoft.data.nyt.storage.StorageFavorite
 
-@Database(entities = [(StorageCountries::class)], version = 3)
+@Database(entities = [(StorageFavorite::class)], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun getCountriesDao(): CountriesDao
+    abstract fun getFavoriteDao(): FavoriteDao
 }

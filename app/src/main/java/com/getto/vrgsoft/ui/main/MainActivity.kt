@@ -1,16 +1,21 @@
 package com.getto.vrgsoft.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.view.ViewPager
+import android.view.Menu
 import android.view.MenuItem
 import com.getto.vrgsoft.R
 import com.getto.vrgsoft.ui.base.BaseActivity
 import com.getto.vrgsoft.ui.emailed.EmailedFragment
+import com.getto.vrgsoft.ui.favorite.FavoriteActivity
 import com.getto.vrgsoft.ui.shared.SharedFragment
 import com.getto.vrgsoft.ui.viewed.ViewedFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
+
+
 
 class MainActivity : BaseActivity(), MainContract.View, BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
@@ -30,7 +35,20 @@ class MainActivity : BaseActivity(), MainContract.View, BottomNavigationView.OnN
         pager.addOnPageChangeListener(this)
         navigation.setOnNavigationItemSelectedListener(this)
 
-    //    replaceFragment(EmailedFragment(), R.id.fr_container, false, false)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        val id = item?.itemId
+        if (id == R.id.action_fav) {
+            startActivity(Intent(this, FavoriteActivity::class.java))
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {

@@ -3,6 +3,10 @@ package com.getto.vrgsoft.di.modul
 import com.getto.vrgsoft.di.PerFragment
 import com.getto.vrgsoft.ui.emailed.EmailedContract
 import com.getto.vrgsoft.ui.emailed.EmailedPresenter
+import com.getto.vrgsoft.ui.shared.SharedContract
+import com.getto.vrgsoft.ui.shared.SharedPresenter
+import com.getto.vrgsoft.ui.viewed.ViewedContract
+import com.getto.vrgsoft.ui.viewed.ViewedPresenter
 import dagger.Module
 import dagger.Provides
 
@@ -19,6 +23,14 @@ class FragmentModule {
     @Provides
     @PerFragment
     fun provideEmailedPresenter (presenter: EmailedPresenter<EmailedContract.View>) : EmailedContract.Presenter<EmailedContract.View> = presenter
+
+    @Provides
+    @PerFragment
+    fun provideSharedPresenter(presenter : SharedPresenter<SharedContract.View>) : SharedContract.Presenter<SharedContract.View> = presenter
+
+    @Provides
+    @PerFragment
+    fun provideViewedPresenter(presenter : ViewedPresenter<ViewedContract.View>) : ViewedContract.Presenter<ViewedContract.View> = presenter
 
 //    @Provides
 //    @PerFragment

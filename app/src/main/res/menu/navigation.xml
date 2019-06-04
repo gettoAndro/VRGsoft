@@ -6,19 +6,19 @@
         android:id="@+id/navigation_emailed"
         android:enabled="true"
         android:icon="@drawable/nav_mail"
-        android:title="Most Emailed"
+        android:title="@string/most_emailed"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigation_shared"
         android:enabled="true"
-        android:icon="@drawable/nav_mail"
-        android:title="Most Shared"
+        android:icon="@drawable/nav_shared"
+        android:title="@string/most_shared"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigation_viewed"
         android:enabled="true"
-        android:icon="@drawable/nav_mail"
-        android:title="Most Viewed"
+        android:icon="@drawable/ic_viewed"
+        android:title="@string/most_viewed"
         app:showAsAction="ifRoom" />
 
 

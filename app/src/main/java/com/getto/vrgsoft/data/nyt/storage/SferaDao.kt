@@ -13,20 +13,23 @@ import io.reactivex.Single
 //TODO implement BaseDao https://medium.com/google-developers/7-pro-tips-for-room-fbadea4bfbd1
 
 @Dao
-interface CountriesDao {
+interface FavoriteDao : BaseDao<StorageFavorite> {
 
     @Transaction
-    fun updateData(countries: List<StorageCountries>){
+    fun updateData(countries: List<StorageFavorite>){
         deleteAll()
         insertAll(countries)
     }
 
-    @Query("SELECT * FROM countries")
-    fun getAll(): Single<List<StorageCountries>>
+    @Query("SELECT * FROM favorite")
+    fun getAll(): Single<List<StorageFavorite>>
 
     @Insert(onConflict = REPLACE)
-    fun insertAll(countries: List<StorageCountries>)
+    fun insertAll(countries: List<StorageFavorite>)
 
-    @Query("DELETE from countries")
+    @Insert(onConflict = REPLACE)
+    override fun insert(entity: StorageFavorite)
+
+    @Query("DELETE from favorite")
     fun deleteAll()
 }
