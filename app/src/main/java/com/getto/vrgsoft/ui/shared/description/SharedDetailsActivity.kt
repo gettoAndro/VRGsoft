@@ -51,4 +51,8 @@ class SharedDetailsActivity : BaseActivity(), SharedDetailsContract.View{
             }
         }
     }
+
+    override fun onSuccess() {
+        toast("Favorite was added success")
+    }
 }

@@ -15,6 +15,7 @@ class SharedDetailsPresenter<V : SharedDetailsContract.View>
         insertDaoUseCase.execute(object : DisposableSingleObserver<String>(){
             override fun onSuccess(t: String) {
                 Log.d("DATABASE",  t)
+                view?.onSuccess()
             }
 
             override fun onError(e: Throwable) {

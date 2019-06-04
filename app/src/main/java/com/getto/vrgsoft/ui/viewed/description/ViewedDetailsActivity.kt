@@ -51,4 +51,8 @@ class ViewedDetailsActivity : BaseActivity(), ViewedDetailsContract.View {
             }
         }
     }
+
+    override fun onSuccess() {
+        toast("Favorite was added success")
+    }
 }

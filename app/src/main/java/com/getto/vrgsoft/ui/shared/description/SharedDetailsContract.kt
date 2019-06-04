@@ -7,6 +7,7 @@ import com.getto.vrgsoft.ui.base.IView
 interface SharedDetailsContract {
 
     interface View : IView {
+        fun onSuccess()
     }
 
     interface Presenter<V : View> : IPresenter<V> {

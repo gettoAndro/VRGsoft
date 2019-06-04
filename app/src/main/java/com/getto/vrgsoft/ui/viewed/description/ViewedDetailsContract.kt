@@ -8,6 +8,7 @@ interface ViewedDetailsContract {
 
 
     interface View : IView {
+        fun onSuccess()
     }
 
     interface Presenter<V : View> : IPresenter<V> {
